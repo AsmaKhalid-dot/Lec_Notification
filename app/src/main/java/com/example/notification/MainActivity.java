@@ -3,6 +3,9 @@ package com.example.notification;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,8 +27,15 @@ public class MainActivity extends AppCompatActivity {
                         .setContentTitle("New Notification")
                         .setContentText(message)
                         .setAutoCancel(true);
-                Intent intent=new Intent(MainActivity.this,);
+                Intent intent=new Intent(MainActivity.this,MainActivity2.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("message",message);
+                PendingIntent pendingIntent=PendingIntent.getActivity(MainActivity.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+                builder.setContentIntent(pendingIntent);
+                NotificationManager notificationManager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+                notificationManager.notify(0,builder.build());
             }
         });
+
     }
 }

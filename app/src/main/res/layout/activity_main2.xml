@@ -4,22 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbarSize="8dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
-    <Button
-        android:id="@+id/BtnNoti"
-        android:layout_width="233dp"
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="312dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginBottom="366dp"
-        android:text="Notification"
-        android:textSize="24sp" />
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="329dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginBottom="383dp"
+        android:text="Notification demo" />
 </RelativeLayout>
