@@ -3,6 +3,7 @@ package com.example.notification;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String message="this is a Notification";
-                NotificationCompat.Builder builder=new NotificationCompat.Builder(MainActivity.this);
+                NotificationCompat.Builder builder=new NotificationCompat.Builder(MainActivity.this).setSmallIcon(R.drawable.ic_message)
+                        .setContentTitle("New Notification")
+                        .setContentText(message)
+                        .setAutoCancel(true);
+                Intent intent=new Intent(MainActivity.this,);
             }
         });
     }
